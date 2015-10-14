@@ -158,7 +158,38 @@ let params1 = (3, 4);
 let params2 = (5, 6);
 
 let tupleSum = tupleAdd(params1, tuple2 : params2);
-let tupleRemain = tupleSubtract(params1, tuple2 : params2)
+print("Numbers being used: \(params1),  \(params2). Operation: Tuple Addition");
+print("Result: \(tupleSum)");
 
-print(tupleSum);
-print(tupleRemain);
+let tupleRemain = tupleSubtract(params1, tuple2 : params2);
+print("Numbers being used: \(params1),  \(params2). Operation: Tuple Subtraction");
+print("Result: \(tupleRemain)");
+
+let dict1 = ["x" : 7, "y" : 9];
+let dict2 = ["x" : 11, "y" : 15];
+
+let dictAddNum = dictAdd(dict1, dict2: dict2);
+print("Numbers being used: \(dict1),  \(dict2). Operation: Dictionary Addition With Ints");
+print("Result: \(dictAddNum)");
+
+let dictSubtractNum = dictSubtract(dict1, dict2 : dict2);
+print("Numbers being used: \(dict1),  \(dict2). Operation: Dictionary Subtraction With Ints");
+print("Result: \(dictSubtractNum)");
+
+let dict1dub = ["x" : 7.0, "y" : 9.0];
+let dict2dub = ["x" : 11.0, "y" : 15.0];
+
+let dictAdd2 = dictAdd(dict1dub, dict2 : dict2dub);
+print("Numbers being used: \(dict1dub),  \(dict2dub). Operation: Dictionary Addition With Doubles");
+print("Result: \(dictAdd2)");
+
+let dictSubtract2 = dictSubtract(dict1dub, dict2 : dict2dub);
+print("Numbers being used: \(dict1dub),  \(dict2dub). Operation: Dictionary Subtraction With Doubles");
+print("Result: \(dictSubtract2)");
+
+let dict3 = ["a" : 1];
+let dict4 = ["d" : 3];
+
+let dictErrorAdd = dictAdd(dict3, dict2 : dict4);
+print("Numbers being used: \(dict3),  \(dict4). Operation: Dictionary Addition with Error");
+print("Result: \(dictErrorAdd), Error successfully caught and returned \(dictErrorAdd)");
